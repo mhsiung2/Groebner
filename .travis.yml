@@ -7,6 +7,12 @@ matrix:
     - python: "3.6"
       env: DEPS="numpy scipy matplotlib pillow pandas!=0.18.0 scikit-image pyyaml pytables numba"  BUILD_DOCS=false
       
-install: true
+virtualenv:
+  system_site_packages: true
+  
+before_install:
+ - sudo apt-get install -qq python-numpy python-scipy
+
+install: True 
 
 script: pytest
