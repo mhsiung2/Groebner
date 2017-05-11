@@ -2,6 +2,6 @@
 
 language: python
 
+install: true
 
-script: # Compile the major tex files (twice for references).
-  - pytest
+script: pytest
