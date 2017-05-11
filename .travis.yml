@@ -1,7 +1,12 @@
 # .travis.yml
 
 language: python
-python: 3.6
+
+matrix:
+  include:
+    - python: "3.6"
+      env: DEPS="numpy scipy matplotlib pillow pandas!=0.18.0 scikit-image pyyaml pytables numba"  BUILD_DOCS=false
+      
 install: true
 
-script: py.test
+script: pytest
