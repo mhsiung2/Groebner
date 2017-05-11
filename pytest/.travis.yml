@@ -1,10 +1,7 @@
+# .travis.yml
+
 language: python
-python:
-  - "2.7"
-  - "3.6"
-# command to install dependencies
-install:
-  - pip install .
-  
-# command to run tests
-script: pytest
+
+
+script: # Compile the major tex files (twice for references).
+  - pytest
